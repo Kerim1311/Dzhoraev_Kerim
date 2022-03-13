@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<style>
+		.li1 {
+			list-style-type: none;
+		}
+		li {
+			display: inline;
+			border-right-style: solid;
+			border-color: red;
+			padding-right: 5px;
+		}
+		[href$=".ru"]{
+			border-style: none;
+		}
+		a {
+			color: green;
+		}
+		a:hover {
+			color: red;
+		}
+		.var2{
+			margin-left: 40px;
+		}
+		.image{
+			height: 20px;
+			overflow: hidden;
+			margin-left: -1px;
+			margin-right: -1px;
+		}
+	</style>
+	<div>
+		<!-- ссылки в строку расположены с помощью display: inline, разделители сделаны с помощью рамки border расположенной с правой стороны-->
+		<ul class="li1">
+			<li><a href="http://google.by">первая ссылка</a></li>
+			<li><a href="http://rambler.ru">вторая ссылка</a></li>
+			<li><a href="http://yandex.by">третья ссылка</a></li>
+			<li><a href="http://vk.com">четвёртая ссылка</a></li>
+			<li><a href="http://ok.ru">пятая ссылка</a></li>
+		</ul>
+	</div>
+	<div class="var2">
+		<!-- ссылки в строку расположены последовательным расположением в коде, разделители сделаны с помощью изображения. -->
+			<a class="aimg" href="http://google.by">первая ссылка</a>
+			<img class="image" src="/img/redpen.png" alt="">
+			<a href="http://rambler.ru">вторая ссылка</a>
+			<img class="image" src="/img/redpen.png" alt="">
+			<a href="http://yandex.by">третья ссылка</a>
+			<img class="image" src="/img/redpen.png" alt="">
+			<a href="http://vk.com">четвёртая ссылка</a>
+			<img class="image" src="/img/redpen.png" alt="">
+			<a href="http://ok.ru">пятая ссылка</a>
+			<img class="image" src="/img/redpen.png" alt="">
+	</div>
+</body>
+</html>

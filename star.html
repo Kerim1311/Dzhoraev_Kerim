@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        .rating {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+        }
+
+        .star {
+            background: #fff;
+            height: 100px;
+            width: 100px;
+            margin-left: 10px;
+            position: relative;
+        }
+        .star::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-size: 100px 100px;
+            background-image: url('https://papik.pro/uploads/posts/2021-09/1630536499_14-papik-pro-p-zvezda-risunok-karandashom-15.jpg');
+            cursor: pointer;
+        }
+        .star:hover::before {
+            background-image: url('https://static4.depositphotos.com/1026550/376/i/600/depositphotos_3763236-stock-photo-gold-star.jpg')
+        }
+        .star:hover~.star::before {
+            background-image: url('https://static4.depositphotos.com/1026550/376/i/600/depositphotos_3763236-stock-photo-gold-star.jpg')
+        }
+    </style>
+    <div class="rating">
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+        <span class="star"></span>
+    </div>
+</body>
+
+</html>
