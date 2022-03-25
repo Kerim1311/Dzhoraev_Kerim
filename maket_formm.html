@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="reset.css">
+	<title>Document</title>
+</head>
+<body>
+	<style>
+		.form{
+			display: block;
+		}
+		.rubrika {
+			width: 100%;
+		}
+		.comment {
+			width: 100%;
+		}
+		.text {
+			width: 100%;
+		}
+		.ul{
+			list-style-type: none;
+			margin: 0;
+		}
+		.text{
+			width: 100%;
+		}
+		@media screen and (max-width:500px) {
+			.text, .rubrika, .comment{
+				display: block;
+				width: 300px;
+			}
+		}
+		@media screen and (min-width:500px) {
+			.text, .rubrika, .comment{
+				width: 100%;
+			}
+		}
+	</style>
+	<form class="form" action="">
+		<p class="text">Для публикации вашей статьи заполните, пожалуйста, следующую форму:</p>
+		<label for="text">Название статьи</label> 
+		<input name="text" class="text" type="text">
+		<label for="rubrika">Рубрика</label>
+		<select class="rubrika" name="rubrika" id="">
+			<option value="1">Программирование</option>
+		</select>
+		<label class="radio" for="radio">Публикация</label>
+		<ul class="ul">
+			<li><input class="radio" name="radio" type="radio" value="1" checked>на сайте</li>
+			<li><input class="radio" name="radio" type="radio" value="2">в журнале 
+			</li>
+			<li><input class="radio" name="radio" type="radio" value="3">на сайте и в журнале
+			</li>
+		</ul>
+		<p class="text">Разрешить комментарии:</p>
+		<input type="checkbox" checked> 
+		<label for="comment">Текст статьи:</label>
+		<textarea class="comment" name="comment" id="" cols="35" rows="5"></textarea>
+		<input type="submit" value="Опубликовать">
+	</form>
+</body>
+
+</html>
